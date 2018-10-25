@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" >
+    <title>Buddha Donate</title>
+    <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/theme.css">
+</head>
+<body class='position-relative' >
+    <section class='plain-1  d-flex flex-column align-items-stretch' style="width:100%;height:100%;">
+        <div class="header flex-shrink-0 flex-grow-0 text-center d-flex flex-row align-items-center justify-content-between">
+            <div class="flex-shrink-0 flex-grow-0 ml-4" style='font-size: 25px;'>设备号: JSS001</div>
+            <div class="flex-shrink-0 flex-grow-0 mr-4 d-flex flex-column align-items-center date-container" style='font-size: 25px;height:80px;line-height: 1em;'>
+                
+            </div>
+        </div>
+        <section class='content-container  flex-fill  d-flex flex-row align-items-stretch position-relative' style='overflow: visible;width:100%;' data-step='1'>
+            <section class='content content-1 flex-shrink-0 flex-grow-0 d-flex flex-row align-items-stretch' style="width:100%">
+               
+            </section>
+        </section>
+    </section>
+    <section style="text-align:center;position:absolute;bottom:0px;left:0;opacity:0.2;">
+        <canvas id="canvasOne" width="530" height="300"></canvas>
+    </section>
+    <section class='canvasTwo' id='canvasTwo'>
+    </section>
+    <script id="vs" type="x-shader/x-vertex">
+        varying vec2 vUv;
+
+        void main() {
+
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+        uniform sampler2D map;
+
+        uniform vec3 fogColor;
+        uniform float fogNear;
+        uniform float fogFar;
+
+        varying vec2 vUv;
+
+        void main() {
+
+            float depth = gl_FragCoord.z / gl_FragCoord.w;
+            float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+            gl_FragColor = texture2D( map, vUv );
+            gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+            gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+
+        }
+    </script>
+    <script src="./js/modernizr.min.js"></script>
+    <script type="text/javascript" src="./js/cloud_base64.js"></script>
+    <script type="text/javascript" src="./js/ThreeWebGL.js"></script>
+    <script type="text/javascript" src="./js/ThreeExtras.js"></script>
+    <script type="text/javascript" src="./js/lanrenzhijia.js"></script>
+    <script type="text/javascript" src="./js/RequestAnimationFrame.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/handlebars.js"></script>
+    <script type="text/javascript" src="./js/jquery-handlebars.js"></script>
+    <script type="text/javascript" src="./js/hammer.js"></script>
+    <script type="text/javascript" src="./swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/list.js"></script>
+    <script type="text/javascript" src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/date.js"></script>
+    <script type="text/javascript" src="./js/renderLampMagicBall.js"></script>
+    <script type="text/javascript" src="./js/renderCloud.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
