@@ -4,8 +4,12 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
-import Home from './components/HelloFromVux'
+// import Home from './components/HelloFromVux'
+import Home from './components/Home'
+import { Flexbox, FlexboxItem } from 'vux'
 
+Vue.component('flexbox', Flexbox)
+Vue.component('flexbox-item', FlexboxItem)
 Vue.use(VueRouter)
 
 const routes = [{
