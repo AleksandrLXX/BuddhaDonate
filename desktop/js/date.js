@@ -11,8 +11,8 @@
     }
 }(this, function (moment){
 
-	var defaultTemplate = ` <div style="height:50%;"><span class='jd-date-time'>{{time}}</span><span class='jd-date-day'>{{day}}</span></div>
-			                <div style="height:50%;"><span class='jd-date-date'>{{date}}</span></div>`
+	var defaultTemplate = `<div style="height:50%;line-height:2em;"><span class='jd-date-time' style='font-size:28px;'>{{time}}</span><span class='jd-date-day' style='font-size: 23px;'>{{day}}</span></div>
+			               <div style="height:50%;font-size:16px;"><span class='jd-date-date'>{{date}}</span></div>`
 	// 模板注册
 	var templates = {
 		default:defaultTemplate
@@ -42,7 +42,7 @@
 		    $this.data('date',$wrapper)
 		    var now=moment().utc().
 		    utcOffset(8),
-	    			date=now.format('YYYY年MM月DD日'),
+	    			date=now.format('公元YYYY年MM月DD号'),
 		        	time=now.format('HH:mm');
 		        	day= '星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_')[now.weekday()];
 	    		$wrapper.find('.jd-date-date').text(date)
@@ -58,9 +58,9 @@
 		    	}
 		    	
 	    		var now=moment().utc().utcOffset(8),
-	    			date=now.format('YYYY年MM月DD日'),
+	    			date=now.format('公元YYYY年MM月DD号'),
 		        	time=now.format('HH:mm');
-		        	day=now.weekday();
+		        	day='星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_')[now.weekday()];
 	    		$wrapper.find('.jd-date-date').text(date)
 	    		$wrapper.find('.jd-date-time').text(time)
 	    		$wrapper.find('.jd-date-day').text(day)

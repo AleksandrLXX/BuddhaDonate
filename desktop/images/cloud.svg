@@ -1,0 +1,21 @@
+<svg version="1.1" id="theSVG" viewBox="0 0 800 800" width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <mask id="masker">
+            <rect class="gradientBox" fill="url(#theGradient)" x="0" y="0" width="800" height="800" />
+        </mask>
+        <pattern id="guy" width="800" height="800">
+            <image xlink:href="./喜乐捐.png" x="0" y="0" width="800" height="800" />
+        </pattern>
+
+        <lineargradient id="theGradient"  x1="0" y1="400" x2="800" y2="400">
+            <stop offset="0" style="stop-color:#000000" />
+            <stop offset="1" style="stop-color:#ffffff" />
+        </lineargradient>
+
+    </defs>
+
+    <g mask="url(#masker)">
+        <rect id="theImage" width="800" height="800" x="0" y="0" fill="url(#guy)" />
+    </g>
+
+</svg>

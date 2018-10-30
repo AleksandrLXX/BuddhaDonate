@@ -18,16 +18,51 @@
                 
             </div>
         </div>
-        <section class='content-container  flex-fill  d-flex flex-row align-items-stretch position-relative' style='overflow: visible;width:100%;' data-step='1'>
-            <section class='content content-1 flex-shrink-0 flex-grow-0 d-flex flex-row align-items-stretch' style="width:100%">
-               
+        <section class='content-container  flex-fill  d-flex flex-column align-items-stretch position-relative' style='overflow: visible;width:100%;' data-step='1'>
+            <section class='content content-1 flex-shrink-0 flex-grow-0 d-flex flex-column align-items-stretch ' style="height:750px;margin-bottom:150px;overflow: hidden;">
+               <div class='position-relative flex-shrink-0 flex-grow-0 d-flex flex-row justify-content-center pt-2' style='height:110px; z-index:999;'>
+                    <div class='donate-title ' style=''>种福田</div>
+                    <div class='position-absolute d-flex flex-column align-items-stretch' style='width:75px;right:100px;height: 100%'>
+                        <div style='height:75px;width:75px;' class='qrcode bgi-normal'></div>
+                        <div style='font-size: 18px;' class='flex-fill text-center'>扫码认捐</div>
+                    </div>
+               </div>
+               <div  class='donate_list donate_list1 flex-fill pt-1' style='overflow: hidden;'>
+
+               </div>
+            </section>
+            <section class='content content-2 flex-shrink-0 flex-grow-0 d-flex flex-column align-items-stretch ' style="height:750px;margin-bottom:150px;overflow: hidden;">
+               <div class='position-relative flex-shrink-0 flex-grow-0 d-flex flex-row justify-content-center pt-2' style='height:110px; z-index:999;'>
+                    <div class='donate-title ' style=''>喜乐捐</div>
+                    <div class='position-absolute d-flex flex-column align-items-stretch' style='width:75px;right:100px;height: 100%'>
+                        <div style='height:75px;width:75px;' class='qrcode bgi-normal'></div>
+                        <div style='font-size: 18px;' class='flex-fill text-center'>扫码认捐</div>
+                    </div>
+               </div>
+               <div  class='donate_list donate_list2 flex-fill pt-1' style='overflow: hidden;'>
+
+               </div>
             </section>
         </section>
+         <section class='active temp-info position-absolute d-flex flex-row align-items-stretch bgi-normal' style=''>
+            <div class='bgi-normal flex-shrink-0 flex-grow-0' style="width: 35%;background-image: url(./images/buddha.png)"></div>
+            <div class='flex-fill d-flex flex-column align-items-center pt-2'>
+                <span class='text-spe' style="font-size: 0.9em;">建达软件部全体</span>
+                <span style="font-size: 0.7em;">认捐自助种福田机一台</span>
+                <span style="font-size: 0.7em;">种福田 <span class='text-spe'>3500</span> 点</span>
+                <span style="font-size: 0.7em;">愿佛光普照,法喜充满！</span>
+            </div>
+        </section>
     </section>
+   
     <section style="text-align:center;position:absolute;bottom:0px;left:0;opacity:0.2;">
         <canvas id="canvasOne" width="530" height="300"></canvas>
     </section>
-    <section class='canvasTwo' id='canvasTwo'>
+    <section class='canvasTwo d-flex flex-column justify-content-center position-absolute' id='canvasTwo' style="">
+        <div class="absolute-center d-flex flex-row align-items-stretch" style='height: 100%;width:100%'>
+            <div class="bgi-normal flex-shrink-0 flex-grow-0 " style='width:40%;height:70%;margin-left:10%;margin-top:5%;background-image: url(./images/随喜功德结善缘.png);z-index: 1002;background-repeat: no-repeat;'>
+            </div>
+        </div>
     </section>
     <script id="vs" type="x-shader/x-vertex">
         varying vec2 vUv;
