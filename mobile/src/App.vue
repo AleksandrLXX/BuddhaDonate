@@ -81,6 +81,18 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
 }
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-red{
+	color:#f54831;
+}
 .absolute-center{
   position: absolute;
   left:50%;
