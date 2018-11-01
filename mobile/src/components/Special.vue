@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div >
 		<h3 class='text-center' style="margin-top:10px;">选佛场建设募捐</h3>
 		<h5 class='text-center' style="color:#999;margin-bottom:20px;" >捐款活动： 开始事件2018年5月12日</h5>
 		
@@ -23,7 +23,7 @@
            <tab :line-width="2" custom-bar-width="40px" v-model='currentTab' active-color='#000' bar-active-color='#4a90e2' style='font-weight:500;font-size: 1.2em;'>
             <tab-item class="vux-center" :selected="currentTab === index" v-for="(item, index) in tabList" @click="currentTab = index" :key="index">{{item}}</tab-item>
           </tab>
-          <vux-swiper v-model="currentTab" height="300px" :show-dots="false" >
+          <vux-swiper v-model="currentTab" height="300px" :show-dots="false" style='font-size:14px;' >
             <swiper-item  key="0">
               <div class="tab-swiper vux-center">tab1 Container</div>
             </swiper-item>
@@ -43,23 +43,24 @@
                </div>
              </card>
              <card > 
-             	<div slot='header'>
+             	<div slot='header' class='vux-1px-b' style='padding-left: 10px;'>
              		感谢 <span class='text-red'>604</span> 位参与者帮助此项目
+
              	</div>
              	
-             	<flexbox slot='content' class='bgi-full banner' align='align' orient='horizontal' justify='left' :gutter='gutter' style='width:80px;'>
+             	<flexbox slot='content' class='bgi-full banner' align='center' orient='horizontal' justify='left' :gutter='gutter' style='height:80px;margin-bottom:20px;' :style='{"padding-left":gutter+"px"}'>
 		
-					<flexbox-item span='50' class="bgi-full donate-item" style="" @click.native="handleMenuClick">
+					<flexbox-item span='50' class="bgi-full donater-item" style="" @click.native="handleMenuClick">
 						<div class='donater-title'>
 							种福田
 						</div>
 					</flexbox-item>
-					<flexbox-item span='50' class="bgi-full donate-item" style="" >
+					<flexbox-item span='50' class="bgi-full donater-item" style="" >
 						<div class='donater-title'>
 							喜乐捐
 						</div>
 					</flexbox-item>
-					<flexbox-item span='50' class="bgi-full donate-item" style="">
+					<flexbox-item span='50' class="bgi-full donater-item" style="">
 						<div class='donater-title'>
 							我的捐款
 						</div>
@@ -68,13 +69,13 @@
 				</flexbox>
              	
              </card>
-	         <x-button @click.native='amt+=20' type='primary' style='background-color: #861c2a;color:#fff;font-size: 16px;'>我要捐款</x-button>
+	         <x-button @click.native='amt+=20' type='primary' style='height:40px;background-color: #861c2a;color:#fff;font-size: 16px;'>我要捐款</x-button>
             </swiper-item>
           </vux-swiper>
         </div>
 	</div>
 </template>
-<script type="es6">
+<script >
 	import { Tab, TabItem } from 'vux'
 	import { Swiper,SwiperItem } from 'vux'
 	import { Card } from 'vux'
@@ -109,7 +110,7 @@
 
 	}
 </script>
-<style type="less">
+<style lang="less">
 	.swiper-slide{
 		background-color: #efefef;
 	}
@@ -145,6 +146,7 @@
 			position: absolute;
 			top:100%;
 			left:50%;
+			font-size: 12px;
 			width:auto;
 			white-space: nowrap;
 			transform: translateX(-50%);

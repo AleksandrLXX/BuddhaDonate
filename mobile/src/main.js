@@ -7,6 +7,7 @@ import App from './App'
 // import Home from './components/HelloFromVux'
 import Home from './components/Home'
 import Special from './components/Special'
+import Normal from './components/Normal'
 import { Flexbox, FlexboxItem } from 'vux'
 import { XButton } from 'vux'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -14,7 +15,13 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // require styles
 import 'swiper/dist/css/swiper.css'
 
+import { Group } from 'vux'
+import { XInput } from 'vux'
+import { XNumber } from 'vux'
 
+Vue.component('x-number', XNumber)
+Vue.component('x-input', XInput)
+Vue.component('group', Group)
 
 Vue.component('x-button', XButton)
 Vue.use(VueAwesomeSwiper)
@@ -30,6 +37,10 @@ const routes = [
 	path:'/special/:id',
 	component:Special,
 	props:true,
+
+},{
+	path:'/normal',
+	component:Normal,
 
 }]
 

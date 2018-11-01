@@ -7,7 +7,7 @@
 					种福田
 				</div>
 			</flexbox-item>
-			<flexbox-item span='50' class="bgi-full donate-item" style="" >
+			<flexbox-item span='50' class="bgi-full donate-item" style="" @click.native="$router.push('./normal')">
 				<div class='donate-title'>
 					喜乐捐
 				</div>
@@ -67,27 +67,10 @@
 		      console.log(item, $event)
 		    }
 		},
-		
+
 
 	}
 </script>
 <style lang="less">
-	.banner{
-		background-image: url(../img/banner.png);
-	}
-	.donate-item{
-		width:50px;height:50px;
-		border-radius:50%;
-		background-color: #a99c87;
-		background-image: url(../img/种福田.png);
-		position: relative;
-		.donate-title{
-			position: absolute;
-			top:100%;
-			left:50%;
-			width:auto;
-			white-space: nowrap;
-			transform: translateX(-50%);
-		}
-	}
+	
 </style>

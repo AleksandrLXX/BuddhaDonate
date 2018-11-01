@@ -12,7 +12,7 @@
     <div class='weui-tab' >
 	  	<x-header :left-options="leftOption"  class='bgi-full'
 	  	style='position: absolute;width: 100%;top:0;left:0;'>浙江第一古刹金粟寺</x-header>
-	  	<div class="weui-tab__panel">
+	  	<div class="weui-tab__panel position-relative">
 	      <router-view></router-view>
 	  	</div>
     </div>
@@ -66,8 +66,8 @@ body {
 .weui-tab__panel {
     box-sizing: border-box;
     height: 100%;
-    padding-bottom: 50px;
     padding-top: 46px;
+    padding-bottom:0;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -101,5 +101,23 @@ body {
 }
 .vux-header{
 	background-image: url(./img/title_pattern.png);
+}
+.banner{
+		background-image: url(./img/banner.png);
+	}
+.donate-item{
+	width:50px;height:50px;
+	border-radius:50%;
+	background-color: #a99c87;
+	background-image: url(./img/种福田.png);
+	position: relative;
+	.donate-title{
+		position: absolute;
+		top:100%;
+		left:50%;
+		width:auto;
+		white-space: nowrap;
+		transform: translateX(-50%);
+	}
 }
 </style>
