@@ -56,9 +56,9 @@
 		    </group>
 			
 		</div>
-		<flexbox class='position-absolute footer' :class='{active:sum>0}'>
-			<flexbox-item class='vux-1px-r'>￥ {{sum}}</flexbox-item>
-			<flexbox-item></flexbox-item>
+		<flexbox class='position-absolute footer' align='strech'  :class='{active:sum>0}'>
+			<flexbox-item class='vux-1px-r' style='flex: 1 1 auto ;'>￥ {{sum}}</flexbox-item>
+			<flexbox-item span='80px' style></flexbox-item>
 		
 		</flexbox>
 	</div>
